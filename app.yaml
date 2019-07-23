@@ -1,0 +1,19 @@
+# 詳細はリファレンス参照
+# see https://cloud.google.com/appengine/docs/standard/python/config/appref?hl=ja
+
+runtime: python37
+
+handlers:
+
+- url: /.*
+  secure: always
+  script: auto
+
+automatic_scaling:
+  min_idle_instances: automatic
+  max_idle_instances: 1
+  min_pending_latency: 3000ms
+  max_pending_latency: automatic
+
+includes:
+- secret.yaml
