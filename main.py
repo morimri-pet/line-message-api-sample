@@ -105,8 +105,6 @@ def handle_content_message(event):
         app.logger.debug("handle_content_message")
 
         message_content = line_bot_api.get_message_content(event.message.id)
-        app.logger.debug(f"image content {message_content}")
-
         message_text = "画像には対応していません。"
 
 
